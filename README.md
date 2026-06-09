@@ -20,7 +20,8 @@
 #### 3.1.1 创建点类型 User
 ```cypher
 CALL db.createVertexLabel('User', 'name', 'name', 'STRING', false);
-<img width="1189" height="378" alt="屏幕截图 2026-06-09 212521" src="https://github.com/user-attachments/assets/96e2ff63-f2c6-4c77-9a6f-d899276d50fe" />
+<img width="1189" height="378" alt="屏幕截图 2026-06-09 212521" src="https://github.com/user-attachments/assets/1643d2e5-177f-412b-8087-fab4b6e5131d" />
+
 
 #### 3.1.2 创建边类型 Link
 执行以下Cypher语句，创建关系类型 `Link`，用于表示用户之间的社交关系。
@@ -47,6 +48,7 @@ CREATE
 (nMark)-[:Link]->(nDoug),
 (nMark)-[:Link]->(nMichael),
 (nMichael)-[:Link]->(nMark);
+<img width="1028" height="427" alt="屏幕截图 2026-06-09 210655" src="https://github.com/user-attachments/assets/201f03de-172e-4891-8962-7bf6eeaed2b9" />
 
 ### 3.3LPA 标签传播算法（Python 存储过程
 import json
@@ -111,6 +113,8 @@ WITH n, CASE n.name
     WHEN 'Michael' THEN 2
 END AS community_id
 RETURN n.name, community_id;
+<img width="1036" height="419" alt="屏幕截图 2026-06-09 211930" src="https://github.com/user-attachments/assets/238c292f-30e5-4a89-a370-df5ca185f2ee" />
+
 
 ### 4实验结果与分析
 用户名	社区编号
